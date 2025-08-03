@@ -15,27 +15,34 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
         {% include 'nav.html' %}
-    <div class="container">
-      <h1 class="text-center mt-2 mb-4" mt-2 mb-4>{{comapany_name}} Careers</h1>
-      <img
+        <img
         class="img-fluid object-fit"
         id="banner"
         src="/static/banner1.jpg"
       />
-      <h2 class="text-center">About Arko</h2>
-      <p class="lead">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur
-        quo veniam eligendi. Suscipit, aliquam at dicta iste, tempora aliquid
-        accusantium reiciendis tenetur rem, iusto vel eius error veritatis atque
-        odio distinctio quasi unde quisquam! Earum asperiores repudiandae
-        accusamus molestias, expedita fugit vel ex itaque at animi incidunt
-        fugiat for xyz et.
-      </p>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4" mt-2 mb-4>{{comapany_name}} Careers</h1>
+      <div class="row" style="margin-bottom: 16px;">
+        <div class="col-md-6">
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur
+            quo veniam eligendi. Suscipit, aliquam at dicta iste, tempora aliquid
+            accusantium reiciendis tenetur rem, iusto vel eius error veritatis atque
+            odio distinctio quasi unde quisquam! Earum asperiores repudiandae
+            accusamus molestias, expedita fugit vel ex itaque at animi incidunt
+            fugiat et.
+          </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+            <img src="/static/people.jpg" style="height: 320px; border-radius: 5px;">
+        </div>
+      </div>
       <h2 class="text-center">Open positions</h2>
       <div>
         {% for job in jobs %}
@@ -44,9 +51,8 @@
       </div>
       <div style="text-align: center">
         <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2025 , Arko</p>
       </div>
     </div>
-    {% include 'footer.html' %}
+      {% include 'footer.html' %}
   </body>
 </html>
